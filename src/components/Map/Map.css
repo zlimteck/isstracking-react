@@ -1,0 +1,25 @@
+.Map {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+.Map_container {
+    display: flex;
+    height: 50vh;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+}
+
+/* MediaQueries Mobile */
+@media screen and (max-width: 480px) {
+    .Map_container {
+        height: 30vh;
+        margin: 10px;
+    }
+}
+
