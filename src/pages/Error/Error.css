@@ -1,0 +1,120 @@
+@keyframes flyrocket {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes lostrocket {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    100% {
+        transform: translateX(-10px) rotate(180deg);
+    }
+}
+
+.error_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 40px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+.lost_rocket {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    animation: lostrocket 4s;
+    animation-fill-mode: forwards;
+}
+
+.error_rocket {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    animation: flyrocket 2s infinite;
+}
+
+.error_title {
+    font-size: 40px;
+    color: var(--tertiary-color);
+    margin: 0;
+    padding-top: 40px; 
+}
+
+.error_description {
+    font-size: 30px;
+    color: var(--tertiary-color);
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.error_redirection {
+    font-size: 20px;
+    color: var(--tertiary-color);
+    margin: 0;
+    padding-bottom: 40px;
+}
+
+.error_redirection a {
+    color: var(--tertiary-color);
+}
+
+/* MediaQueries Tablett */
+@media screen and (max-width: 768px) {
+    .error_title {
+        font-size: 30px;
+    }
+
+    .error_description {
+        font-size: 20px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .error_redirection {
+        font-size: 14px;
+        padding-bottom: 20px;
+    }
+}
+
+/* MediaQueries Mobile */
+@media screen and (max-width: 480px) {
+    .lost_rocket {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .error_rocket {
+        width: 150px;
+        height: 150px;
+    }
+
+    .error_title {
+        font-size: 20px;
+    }
+
+    .error_description {
+        font-size: 14px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .error_redirection {
+        font-size: 12px;
+        padding-bottom: 10px;
+    }
+}
+
