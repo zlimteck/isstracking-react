@@ -1,10 +1,11 @@
 import './Missions.css';
+import Card from '../../components/Card/Card';
 
 function Missions() {
     return (
-        <section className="Missions">
-        <h1>Missions</h1>
-        </section>
+        <div className="Missions">
+            <Card />
+        </div>
     );
 }
 

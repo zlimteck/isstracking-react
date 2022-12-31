@@ -1,0 +1,58 @@
+[
+    {
+        "id": "1",
+        "number_expedition": 1,
+        "name_expedition": "Expedition STS-88", 
+        "patch_expedition": "https://zupimages.net/up/22/52/b68q.png",
+        "date_start": "4 décembre 1998",
+        "date_end": "15 décembre 1998",
+        "astronauts": [
+                "Robert Donald Cabana (USA)",
+                "Nancy Jane Sherlock Currie (USA)",
+                "Sergei Krikalev (Russia)",
+                "James Hansen Newman (USA)",
+                "Jerry Lynn Ross (USA)",
+                "Frederick Wilford Sturckow (USA)"
+            ],
+        "ship": "Endeavour",
+        "picture_crew": "https://zupimages.net/up/22/52/nn4s.jpg"
+    },
+    {
+        "id": "2",
+        "number_expedition": 2,
+        "name_expedition": "Expedition STS-96",
+        "patch_expedition": "https://zupimages.net/up/22/52/9sku.png",
+        "date_start": "27 mai 1999",
+        "date_end": "6 juin 1999",
+        "astronauts": [
+                "Daniel Thomas Barry (USA)",
+                "Rick Douglas Husband (USA)",
+                "Tamara Elizabeth Jernigan (USA)",
+                "Ellen Ochoa (USA)",
+                "Julie Payette (Canada)",
+                "Kent Vernon Rominger (USA)",
+                "Valery Ivanovich Tokarev (Russia)"
+            ],
+        "ship": "Discovery",
+        "picture_crew": "https://zupimages.net/up/22/52/39jl.jpg"
+    },
+    {
+        "id": "3",
+        "number_expedition": 3,
+        "name_expedition": "Expedition STS-101",
+        "patch_expedition": "https://zupimages.net/up/22/52/yj81.png",
+        "date_start": "19 mai 2000",
+        "date_end": "29 mai 2000",
+        "astronauts": [
+                "James Donald Halsell (USA)",
+                "Susan Jane Helms (USA)",
+                "Scott Jay Horowitz (USA)",
+                "James Voss (USA)",
+                "Mary Weber (USA)",
+                "Jeffrey Nels Williams (USA)",
+                "Iouri Oussatchiov (Russia)"
+            ],
+        "ship": "Atlantis",
+        "picture_crew": "https://zupimages.net/up/22/52/45a7.jpg"
+    }
+]

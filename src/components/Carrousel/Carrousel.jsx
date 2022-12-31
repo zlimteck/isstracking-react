@@ -39,7 +39,7 @@ function Carrousel() {
         }
     };
     return (
-        <div className="carrousel">
+        <section className="carrousel">
             <div className="images_container">
                 <img className="Carrousel_image" src={images[currentImage].url} alt="Illustration de l'ISS dans le carrousel"  />
                 <div className="carrousel_counter">
@@ -55,7 +55,7 @@ function Carrousel() {
                     </>
                 )}
             </div>
-        </div>
+        </section>
     );
 }
 

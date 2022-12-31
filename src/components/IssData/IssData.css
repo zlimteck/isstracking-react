@@ -41,10 +41,15 @@
     margin-right: 20px;
 }
 
+.iss_visibility {
+    font-size: 15px;
+    margin-right: 20px;
+}
+
 /* MediaQueries Tablette */
 @media screen and (max-width: 768px) {
     .Iss_informations {
-        padding: 10px;
+        padding: 20px;
     }
 }
 

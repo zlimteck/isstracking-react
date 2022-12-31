@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import Missions from "./pages/Missions/Missions";
 import Tracking from "./pages/Tracking/Tracking";
 import Error from "./pages/Error/Error";
+import Expeditions from "./pages/Expeditions/Expeditions";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
 
@@ -15,8 +16,9 @@ function App() {
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/missions" element={<Missions />} />
                 <Route path="/tracking" element={<Tracking />} />
+                <Route path="/missions" element={<Missions />} />
+                <Route path="missions/:id" element={<Expeditions />} />
                 <Route path="*" element={<Error />} />
             </Routes>
             <Footer />

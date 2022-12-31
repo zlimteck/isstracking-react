@@ -22,6 +22,7 @@ function IssData() {
     const minutes = "0" + date.getMinutes();
     const seconds = "0" + date.getSeconds();
     const formattedTime = day + '/' + month + '/' + year + ' ' + hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+    const daylight = date.getHours() >= 6 && date.getHours() <= 18;
 
     return (
         <section className='Iss_informations'>
@@ -45,6 +46,10 @@ function IssData() {
                 <div className='iss_daily'>
                     <p>Date:</p>
                     <p>{formattedTime}</p>
+                </div>
+                <div className='iss_visibility'>
+                    <p>Visibilité:</p>
+                    <p>{daylight ? 'Jour' : 'Nuit'}</p>
                 </div>
             </div>
         </section>

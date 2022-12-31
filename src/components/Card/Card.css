@@ -1,0 +1,108 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    max-width: 100%;
+    padding: 10px;  
+    margin-top: 30px;
+    margin-bottom: 30px; 
+}
+
+.card_container {
+    display: flex;
+    width: 210px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 20px 20px;
+}
+
+.card_link {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.card_img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.card_title {
+    display: flex;
+    padding: 10px;
+    font-size: 24px;
+    color: var(--tertiary-color);
+    justify-content: center;
+}
+
+/* MediaQueries Tablet */
+@media screen and (max-width:768px) {
+    .gallery {
+        width: 100%;
+        display: flex;
+        padding: 0px;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    .card_container {
+        width: 100%;
+        height: 190px;
+        margin-bottom: 15px;
+        margin: 0;
+    }
+
+    .card_link {
+        border: 2px solid var(--primary-color);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+        margin: 20px 20px 0 20px;
+        width: 100%;
+    }
+
+    .card_img {
+        object-fit: contain;
+        padding-top: 10px;
+        height: 95%;
+    }
+
+    .card_title {
+        font-size: 20px;   
+    }
+}
+
+/* MediaQueries Mobile*/
+@media screen and (max-width: 480px) {
+    .gallery {
+        width: 100%;
+        display: flex;
+        padding: 0px;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+
+    .card_container {
+        width: 100%;
+        height: 150px;
+        margin-bottom: 15px;
+        margin: 0;
+    }
+
+    .card_link {
+        border: 1px solid var(--tertiary-color);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+        margin: 10px 10px 0 10px;
+        width: 100%;
+    }
+
+    .card_img {
+        object-fit: contain;
+        height: 95%;
+    }
+
+    .card_title {
+        font-size: 16px;
+    }
+}
