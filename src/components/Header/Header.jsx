@@ -23,9 +23,9 @@ function Header() {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/Missions" className={({isActive}) => {
+                        <NavLink to="/Expeditions" className={({isActive}) => {
                             return isActive ? "navbar_link_active" : "navbar_link"; }}
-                            >Missions
+                            >Expeditions
                         </NavLink>
                     </li>
                 </ul>

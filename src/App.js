@@ -2,10 +2,10 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
-import Missions from "./pages/Missions/Missions";
+import Expeditions from "./pages/Expeditions/Expeditions";
 import Tracking from "./pages/Tracking/Tracking";
 import Error from "./pages/Error/Error";
-import Expeditions from "./pages/Expeditions/Expeditions";
+import Expedition from "./pages/Expedition/Expedition";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
 
@@ -17,8 +17,8 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/tracking" element={<Tracking />} />
-                <Route path="/missions" element={<Missions />} />
-                <Route path="missions/:id" element={<Expeditions />} />
+                <Route path="/expeditions" element={<Expeditions />} />
+                <Route path="expeditions/:id" element={<Expedition />} />
                 <Route path="*" element={<Error />} />
             </Routes>
             <Footer />

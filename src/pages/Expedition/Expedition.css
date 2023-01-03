@@ -1,0 +1,39 @@
+.list_astronauts {
+    list-style-type: none;
+}
+
+.collapse_crew {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    margin-top: 30px;
+}
+
+.crew_picture {
+    height: 500px;
+    width: 600px;
+    object-fit: contain;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+/* MediaQueries Tablet */
+@media screen and (max-width: 768px) {
+    .crew_picture {
+        height: 300px;
+        width: 400px;
+        margin: 10px;
+        border-radius: 5px;
+    }
+}
+
+/* MediaQueries Mobile */
+@media screen and (max-width: 480px) {
+    .crew_picture {
+        height: 200px;
+        width: 300px;
+        margin: 10px;
+        border-radius: 5px;
+    }
+}

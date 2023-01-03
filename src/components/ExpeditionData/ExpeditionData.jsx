@@ -10,7 +10,7 @@ function ExpeditionData ({mission, title, patch, date, people, ship}) {
                 <p className="expedition_date_text">{date}</p>
             </div>
             <div className="expedition_ship">
-                <h3 className="expedition_ship_title">Nom de la navette: </h3>
+                <h3 className="expedition_ship_title">Navette d'arrivé et de départ: </h3>
                 <p className="expedition_ship_title">{ship}</p>
             </div>
         </section>
