@@ -1,6 +1,6 @@
 import './ExpeditionData.css';
 
-function ExpeditionData ({mission, title, patch, date, people, ship}) {
+function ExpeditionData ({expeditions, title, patch, date, people, ship}) {
     return (
         <section className="expedition_infos">
             <h2 className="expedition_title">{title}</h2>

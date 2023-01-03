@@ -15,15 +15,21 @@ function Expeditions () {
         return (
             <Error404 />
         )
-    } 
+    }
+    const monthNames = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
+    "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"
+    ];
+    const date_start = new Date(expeditions.date_start);
+    const date_end = new Date(expeditions.date_end);
+    expeditions.date_start_fr = date_start.getDate() + " " + monthNames[date_start.getMonth()] + " " + date_start.getFullYear();
+    expeditions.date_end_fr = date_end.getDate() + " " + monthNames[date_end.getMonth()] + " " + date_end.getFullYear();
     const key = expeditions.number_expedition;
     const name = expeditions.name_expedition;
     const patch = expeditions.patch_expedition;
-    const date = expeditions.date_start + " au " + expeditions.date_end;
-    //people et nationality sont dans le meme tableau mais dans des objets differents
+    const date = expeditions.date_start_fr + " - " + expeditions.date_end_fr;
     const people = expeditions.astronauts;
     const ship = expeditions.ship_starting + " - " + expeditions.ship_return;
-    const picture = expeditions.picture_crew
+    const picture = expeditions.picture_crew;
     return (
         <section className="expedition">
             <div className="expeditions_infos">
@@ -32,7 +38,7 @@ function Expeditions () {
                 expeditions={expeditions} 
                 title={name} 
                 patch={patch} 
-                date={date} 
+                date={date}
                 people={people} 
                 ship={ship}
                 picture={picture}
