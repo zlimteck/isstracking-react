@@ -12,9 +12,9 @@ function ExpeditionData ({title, patch, datestart, datend, shipstarting, shipret
                 <p className="expedition_date_text">{datend}</p>
             </div>
             <div className="expedition_ship">
-                <h3 className="expedition_ship_title">Navette(s) d'arrivé: </h3>
+                <h3 className="expedition_ship_title">Navette(s) de départ:</h3>
                 <p className="expedition_ship_text">{shipstarting}</p>
-                <h3 className="expedition_ship_title">Navette(s) de depart: </h3>
+                <h3 className="expedition_ship_title">Navette(s) de retour:</h3>
                 <p className="expedition_ship_text">{shipreturning}</p>
             </div>
         </section>
