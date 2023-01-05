@@ -27,32 +27,37 @@
     justify-content: center;
     font-size: 15px;
     margin-right: 20px;
-    width: 150px;
+    width: 210px;
 }
+
 .iss_latitude {
     font-size: 15px;
     margin-right: 20px;
-    width: 150px;
+    width: 210px;
 }
+
 .iss_altitude {
     font-size: 15px;
     margin-right: 20px;
-    width: 150px;
+    width: 210px;
 }
+
 .iss_velocity {
     font-size: 15px;
     margin-right: 20px;
-    width: 150px;
+    width: 210px;
 }
+
 .iss_daily {
     font-size: 15px;
     margin-right: 20px;
-    width: 150px;
+    width: 210px;
 }
+
 .iss_visibility {
     font-size: 15px;
     margin-right: 20px;
-    width: 150px;
+    width: 210px;
 }
 
 /* MediaQueries Tablette */
