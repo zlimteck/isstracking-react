@@ -10,40 +10,49 @@
 
 .iss_data {
     display: flex;
-    justify-content: flex;
+    justify-content: center;
     align-items: center;
     color: var(--tertiary-color);
     flex-wrap: wrap;
 }
 
 .iss_data p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 0 10px 0;
 }
 
 .iss_longitude {
+    justify-content: center;
     font-size: 15px;
     margin-right: 20px;
+    width: 150px;
 }
 .iss_latitude {
     font-size: 15px;
     margin-right: 20px;
+    width: 150px;
 }
 .iss_altitude {
     font-size: 15px;
     margin-right: 20px;
+    width: 150px;
 }
 .iss_velocity {
     font-size: 15px;
     margin-right: 20px;
+    width: 150px;
 }
 .iss_daily {
     font-size: 15px;
     margin-right: 20px;
+    width: 150px;
 }
-
 .iss_visibility {
     font-size: 15px;
     margin-right: 20px;
+    width: 150px;
 }
 
 /* MediaQueries Tablette */

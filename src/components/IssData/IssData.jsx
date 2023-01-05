@@ -13,15 +13,16 @@ function IssData() {
         const interval = setInterval(getISSDATA, 3000);
         return () => clearInterval(interval);
     }, []);
-    //Convertir le timestamp en date
+    //Calcule la date (heure et jour) en foncrion de la position de l'ISS
     const date = new Date(issData.timestamp * 1000);
-    const day = date.getDate();
-    const month = date.getMonth() + 1;
-    const year = date.getFullYear();
-    const hours = date.getHours();
-    const minutes = "0" + date.getMinutes();
-    const seconds = "0" + date.getSeconds();
-    const formattedTime = day + '/' + month + '/' + year + ' ' + hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+    const formattedTime = date.toLocaleTimeString('fr-FR', {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+    });
     const daylight = issData.visibility === 'daylight';
     return (
         <section className='Iss_informations'>
