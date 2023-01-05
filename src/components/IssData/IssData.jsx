@@ -2,11 +2,11 @@ import './IssData.css';
 import React from 'react';
 
 async function getTimeZone(latitude, longitude, timestamp) {
-  const apiKey = '92SLH9NNBTYL';
-  const timeZoneApiUrl = `http://api.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=json&by=position&lat=${latitude}&lng=${longitude}&time=${timestamp}`;
-  const response = await fetch(timeZoneApiUrl);
-  const timeZoneData = await response.json();
-  return timeZoneData.zoneName;
+    const apiKey = '92SLH9NNBTYL';
+    const timeZoneApiUrl = `https://api.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=json&by=position&lat=${latitude}&lng=${longitude}&time=${timestamp}`;
+    const response = await fetch(timeZoneApiUrl);
+    const timeZoneData = await response.json();
+    return timeZoneData.zoneName;
 }
 
 function IssData() {
