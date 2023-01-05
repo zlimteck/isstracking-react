@@ -1,5 +1,5 @@
 .loading {
-    color: var(tertiary-color);
+    color: var(--tertiary-color);
 }
 
 .list_astronauts {
