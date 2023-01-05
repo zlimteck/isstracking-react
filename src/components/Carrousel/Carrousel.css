@@ -52,7 +52,7 @@
     height: 79px;
     cursor: pointer;
     margin-left: 10px;
-    color: var(tertiary-color);
+    color: var(--tertiary-color);
 }
 
 .carrousel_next {
@@ -60,7 +60,7 @@
     height: 79px;
     cursor: pointer;
     margin-right: 10px;
-    background-color: var(tertiary-color);
+    background-color: var(--tertiary-color);
 }
 
 /* MediaQueries Tablet */

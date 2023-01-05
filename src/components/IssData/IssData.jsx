@@ -1,7 +1,6 @@
 import './IssData.css';
 import React from 'react';
 
-
 function IssData() {
     const [issData, setISSDATA] = React.useState({});
     React.useEffect(() => {
