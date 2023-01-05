@@ -26,7 +26,6 @@ function Map () {
         const getISSPosition = async () => {
         const response = await fetch('https://api.wheretheiss.at/v1/satellites/25544');
         const data = await response.json();
-        console.log(data);
         setISSPosition({ lat: data.latitude, lng: data.longitude });
         setISSVisibility(data.visibility); // mise à jour de la visibilité de l'ISS
     };
