@@ -5,8 +5,6 @@ import './Map.css';
 import icon from '../../assets/issdaylight.svg';
 import icon1 from '../../assets/isseclipsed.svg';
 
-console.log(`${process.env.REACT_APP_TEST}`);
-
 const ISSMarkerdaylight = L.icon({
     iconUrl: icon,
     iconSize: [45, 45],
