@@ -1,6 +1,6 @@
 import './ExpeditionData.css';
 
-function ExpeditionData ({title, patch, datestart, datend, shipstarting, shipreturning}) {
+function ExpeditionData ({title, patch, datestart, datend, shipstarting, shipreturning, totaltime}) {
     return (
         <section className="expedition_infos">
             <h2 className="expedition_title">{title}</h2>
@@ -10,6 +10,8 @@ function ExpeditionData ({title, patch, datestart, datend, shipstarting, shipret
                 <p className="expedition_date_text">{datestart}</p>
                 <h3 className="expedition_date_title">Date de retour:</h3>
                 <p className="expedition_date_text">{datend}</p>
+                <h3 className="expedition_date_title">Durée de l'expédition:</h3>
+                <p className="expedition_date_text">{totaltime}</p>
             </div>
             <div className="expedition_ship">
                 <h3 className="expedition_ship_title">Navette(s) de départ:</h3>

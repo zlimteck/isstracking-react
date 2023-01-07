@@ -34,6 +34,7 @@
 }
 
 .expedition_date_text {
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,6 +53,7 @@
 }
 
 .expedition_ship_text {
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;

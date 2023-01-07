@@ -47,15 +47,19 @@ function Expeditions () {
         const dateEnd = new Date(date);
         return dateEnd.getDate() + " " + monthNames[dateEnd.getMonth()] + " " + dateEnd.getFullYear();
     });
+    const defaultValue = 'Inconnu';
     const key = expedition.number_expedition;
     const name = expedition.name_expedition;
     const patch = expedition.patch_expedition;
-    const datestart = expedition.date_start_fr.join(" et ");
-    const datend = expedition.date_end_fr.join(" et ");
+    const datestart = expedition.date_start_fr.join(" , ");
+    const datend = expedition.date_end_fr.join(" , ");
     const people = expedition.astronauts;
     const shipstarting = expedition.ship_starting.join(" - ");
     const shipreturning = expedition.ship_return.join(" - ");
     const picture = expedition.picture_crew;
+    const totaltime = expedition.total_time.replace('days', 'jours') || defaultValue;
+    const astronautsnumber = expedition.astronauts_number;
+
     return (
         <section className="expedition">
             <div className="expeditions_infos">
@@ -70,11 +74,13 @@ function Expeditions () {
                 shipstarting={shipstarting}
                 shipreturning={shipreturning}
                 picture={picture}
+                totaltime={totaltime}
+                astronautsnumber={astronautsnumber}
                 />
             </div>
             <section className="collapse_astronautes">
                 <Collapse
-                title="Astronautes a bord"
+                title={`Astronautes a bord: (${astronautsnumber})`}
                 texte={people.map((astronauts, list) => (
                     <li key={list} className="list_astronauts">{astronauts}</li>
                 ))}
