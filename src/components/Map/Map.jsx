@@ -53,7 +53,7 @@ return (
             />
             <Marker position={issPosition} icon={issVisibility === "daylight" ? ISSMarkerdaylight : ISSMarkereclipsed}>
                 <Popup>
-                    <h2>International Space Station</h2>
+                    <h2>ISS</h2>
                     <p>Latitude: {issPosition.lat}</p>
                     <p>Longitude: {issPosition.lng}</p>
                     <p>Visibilité: {issVisibility}</p>
