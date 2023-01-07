@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import Expeditions from "./pages/Expeditions/Expeditions";
 import Tracking from "./pages/Tracking/Tracking";
-import Error404 from "./pages/Error/Error";
+import Error404 from "./pages/Error404/Error404";
 import Expedition from "./pages/Expedition/Expedition";
 import Footer from "./components/Footer/Footer";
 import "./App.css";

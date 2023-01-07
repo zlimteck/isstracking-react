@@ -1,10 +1,10 @@
 // Image svg d'une fusée
 import rocket from "../../assets/rocket.svg";
-import "./Error.css";
+import "./Error404.css";
 
 function Error() {
     return (
-        <section className="Error">
+        <section className="Error404">
             <div className="error_content">
                 <div className="lost_rocket">
                     <img className="error_rocket" src={rocket} alt="rocket de la page erreur 404"/>

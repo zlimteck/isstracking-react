@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Error404 from '../Error/Error';
+import Error404 from '../Error404/Error404';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import ExpeditionData from '../../components/ExpeditionData/ExpeditionData';
