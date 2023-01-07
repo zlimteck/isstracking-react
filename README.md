@@ -1,5 +1,6 @@
 # ISS Tracking
 
+![Vercel](https://vercelbadge.vercel.app/api/zlimteck/isstracking-react)
 [![GitHub issues](https://img.shields.io/github/issues/zlimteck/isstracking-react)](https://github.com/zlimteck/isstracking-react/issues) [![GitHub forks](https://img.shields.io/github/forks/zlimteck/isstracking-react)](https://github.com/zlimteck/isstracking-react/network) [![GitHub stars](https://img.shields.io/github/stars/zlimteck/isstracking-react)](https://github.com/zlimteck/isstracking-react/stargazers) [![GitHub license](https://img.shields.io/github/license/zlimteck/isstracking-react)](https://github.com/zlimteck/isstracking-react/blob/master/LICENSE)
 
 ISS Tracker is a React application that displays the current position of the International Space Station (ISS) on a Leaflet map and provides information on past and upcoming expeditions to the ISS. The app utilizes the [Where The ISS At API](https://api.wheretheiss.at/v1/satellites/25544) to retrieve the ISS's current location and the [ISS Tracking API](https://api.isstracking.xyz/v1/expeditions) to retrieve expedition data. The map is powered by Mapbox, and a Mapbox access token is required to use the app.
