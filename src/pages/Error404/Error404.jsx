@@ -2,7 +2,7 @@
 import rocket from "../../assets/rocket.svg";
 import "./Error404.css";
 
-function Error() {
+function Error404() {
     return (
         <section className="Error404">
             <div className="error_content">
@@ -16,4 +16,4 @@ function Error() {
         </section>
     );
 }
-export default Error;
+export default Error404;
