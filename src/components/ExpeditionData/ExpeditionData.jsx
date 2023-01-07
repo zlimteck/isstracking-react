@@ -3,7 +3,7 @@ import './ExpeditionData.css';
 function ExpeditionData ({title, patch, datestart, datend, shipstarting, shipreturning, totaltime}) {
     return (
         <section className="expedition_infos">
-            <h2 className="expedition_title">{title}</h2>
+            <h1 className="expedition_title">{title}</h1>
             <img className="expedition_patch" src={patch} alt="Expedition Patch"/>
             <div className="expedition_date">
                 <h3 className="expedition_date_title">Date de lancement:</h3>

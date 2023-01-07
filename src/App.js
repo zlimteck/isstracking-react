@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import Expeditions from "./pages/Expeditions/Expeditions";
 import Tracking from "./pages/Tracking/Tracking";
-import Error from "./pages/Error/Error";
+import Error404 from "./pages/Error/Error";
 import Expedition from "./pages/Expedition/Expedition";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
@@ -22,7 +22,7 @@ function App() {
                     <Route path="/tracking" element={<Tracking />} />
                     <Route path="/expeditions" element={<Expeditions />} />
                     <Route path="expeditions/:id" element={<Expedition />} />
-                    <Route path="*" element={<Error />} />
+                    <Route path="*" element={<Error404 />} />
                 </Routes>
                 <Footer />
             </div>
