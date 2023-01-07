@@ -5,6 +5,8 @@ import './Map.css';
 import icon from '../../assets/issdaylight.svg';
 import icon1 from '../../assets/isseclipsed.svg';
 
+console.log(`${process.env.REACT_APP_TEST}`);
+
 const ISSMarkerdaylight = L.icon({
     iconUrl: icon,
     iconSize: [45, 45],
@@ -48,7 +50,7 @@ return (
         <MapContainer className="Map_container" center={[0, 0]} zoom={3} scrollWheelZoom={false} ref={mapRef}>
             <TileLayer
                 url="https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}"
-                accessToken='sk.eyJ1IjoiZ3JpbXoiLCJhIjoiY2xjODUyaDhtMWcwazNwbW85c3cyNHZvbyJ9.x_ix8uMGwpehI_zqkz45sA'
+                accessToken={process.env.REACT_APP_TOKEN_KEY}
                 id="mapbox/streets-v11"
             />
             <Marker position={issPosition} icon={issVisibility === "daylight" ? ISSMarkerdaylight : ISSMarkereclipsed}>
