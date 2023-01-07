@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# ISS Tracking
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![GitHub issues](https://img.shields.io/github/issues/zlimteck/isstracking-react)](https://github.com/zlimteck/isstracking-react/issues) [![GitHub forks](https://img.shields.io/github/forks/zlimteck/isstracking-react)](https://github.com/zlimteck/isstracking-react/network) [![GitHub stars](https://img.shields.io/github/stars/zlimteck/isstracking-react)](https://github.com/zlimteck/isstracking-react/stargazers) [![GitHub license](https://img.shields.io/github/license/zlimteck/isstracking-react)](https://github.com/zlimteck/isstracking-react/blob/master/LICENSE)
 
-## Available Scripts
+ISS Tracker is a React application that displays the current position of the International Space Station (ISS) on a Leaflet map and provides information on past and upcoming expeditions to the ISS. The app utilizes the [Where The ISS At API](https://api.wheretheiss.at/v1/satellites/25544) to retrieve the ISS's current location and the [ISS Tracking API](https://api.isstracking.xyz/v1/expeditions) to retrieve expedition data. The map is powered by Mapbox, and a Mapbox access token is required to use the app.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Real-time tracking of the ISS on a map
+- Information on past and upcoming expeditions to the ISS
+- Responsive design for optimal viewing on different devices
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js
+- npm (included with Node.js)
+- Mapbox access token - create a free account at [Mapbox](https://www.mapbox.com/) to obtain a token
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`git clone https://github.com/zlimteck/isstracking-react.git`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navigate to the project directory:
 
-### `npm run eject`
+`cd isstracking-react`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Create a `.env` file in the root of the project and add your Mapbox access token:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`REACT_APP_TOKEN_KEY=your_mapbox_access_token`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Install the dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+`npm install`
 
-## Learn More
+5. Start the development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`npm start`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The app will now be running on [http://localhost:3000](http://localhost:3000).
 
-### Code Splitting
+## Built With
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [React](https://reactjs.org/) - JavaScript library for building user interfaces
+- [Leaflet](https://leafletjs.com/) - Open-source JavaScript library for interactive maps
+- [Mapbox](https://www.mapbox.com/) - Mapping platform for custom designed maps 
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Where The ISS At API](https://api.wheretheiss.at/v1/satellites/25544) - API for retrieving the current location of the ISS
+- [ISS Tracking API](https://api.isstracking.xyz/v1/expeditions) - API for retrieving expedition data
