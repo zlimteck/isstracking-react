@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapContainer, TileLayer, Marker } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, useMap, Popup} from 'react-leaflet';
 import L from 'leaflet';
 import './Map.css';
 import icon from '../../assets/issdaylight.svg';
@@ -33,26 +33,33 @@ function Map () {
     const interval = setInterval(getISSPosition, 3000);
     return () => clearInterval(interval);
 }, []); // Convertir la visibilité en mètres
-
 const goToISSPosition = () => {
     mapRef.current.setView(issPosition, 3);
-  };
-
+};
+// Mettre à jour la position de l'ISS sur la carte
+const ISSPositionMarker = () => {
+    const map = useMap();
+    map.setView(issPosition, map.getZoom());
+    return null;
+};
 const mapRef = React.useRef();
-
 return (
     <section className="Map">
-        <MapContainer ref={mapRef} className="Map_container" center={issPosition} zoom={2} scrollWheelZoom={false}>
-            <TileLayer 
-            url="https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}"
-            accessToken='sk.eyJ1IjoiZ3JpbXoiLCJhIjoiY2xjODUyaDhtMWcwazNwbW85c3cyNHZvbyJ9.x_ix8uMGwpehI_zqkz45sA'
-            id="mapbox/streets-v11"
+        <MapContainer className="Map_container" center={[0, 0]} zoom={3} scrollWheelZoom={false} ref={mapRef}>
+            <TileLayer
+                url="https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}"
+                accessToken='sk.eyJ1IjoiZ3JpbXoiLCJhIjoiY2xjODUyaDhtMWcwazNwbW85c3cyNHZvbyJ9.x_ix8uMGwpehI_zqkz45sA'
+                id="mapbox/streets-v11"
             />
-            {issVisibility === "daylight" ? (
-                <Marker position={issPosition} icon={ISSMarkerdaylight}/>
-            ) : (
-                <Marker position={issPosition} icon={ISSMarkereclipsed}/>
-            )}
+            <Marker position={issPosition} icon={issVisibility === "daylight" ? ISSMarkerdaylight : ISSMarkereclipsed}>
+                <Popup>
+                    <h2>International Space Station</h2>
+                    <p>Latitude: {issPosition.lat}</p>
+                    <p>Longitude: {issPosition.lng}</p>
+                    <p>Visibilité: {issVisibility}</p>
+                </Popup>
+            </Marker>
+            <ISSPositionMarker />
         </MapContainer>
         <div className="Map_button">
             <button className="button" onClick={goToISSPosition}>Zoomer sur l'ISS</button>

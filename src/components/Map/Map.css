@@ -36,6 +36,15 @@
     cursor: pointer;
 }
 
+.leaflet-popup-content-wrapper {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+.leaflet-popup-content {
+    color: var(--tertiary-color);
+}
+
 /* MediaQueries Mobile */
 @media screen and (max-width: 480px) {
     .Map_container {
