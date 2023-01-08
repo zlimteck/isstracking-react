@@ -69,7 +69,7 @@ function Card(){
                     {currentPage < numPages && <img className="arrow" src={nextArrow} alt="Icone page suivante" onClick={() => handlePageChange(1)} />}
                 </div>
                 <div className="card_number_search">
-                    <input className="imput_search" type="text" placeholder="Recherche par numéro d'expédition" onChange={(event) => setSearchTerm(event.target.value)} />
+                    <input className="imput_search" type="text" placeholder="Recherche par numéro" onChange={(event) => setSearchTerm(event.target.value)} />
                 </div>
             </div>
         </section>

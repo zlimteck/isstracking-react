@@ -84,7 +84,7 @@
 }
 
 .card_number_search {
-    width: 250px;
+    display: flex;
 }
 
 .imput_search {
