@@ -47,18 +47,18 @@ function Expeditions () {
         const dateEnd = new Date(date);
         return dateEnd.getDate() + " " + monthNames[dateEnd.getMonth()] + " " + dateEnd.getFullYear();
     });
-    const defaultValue = 'Inconnu';
-    const key = expedition.number_expedition;
-    const name = expedition.name_expedition;
-    const patch = expedition.patch_expedition;
-    const datestart = expedition.date_start_fr.join(" , ");
-    const datend = expedition.date_end_fr.join(" , ");
-    const people = expedition.astronauts;
-    const shipstarting = expedition.ship_starting.join(" - ");
-    const shipreturning = expedition.ship_return.join(" - ");
-    const picture = expedition.picture_crew;
+    const defaultValue = 'Information non disponible';
+    const key = expedition.number_expedition || defaultValue;
+    const name = expedition.name_expedition || defaultValue;
+    const patch = expedition.patch_expedition || defaultValue;
+    const datestart = expedition.date_start_fr.join(" , ").replace('NaN undefined NaN', 'Information non disponible');
+    const datend = expedition.date_end_fr.join(" , ").replace('NaN undefined NaN', 'Information non disponible');
+    const people = expedition.astronauts || defaultValue;
+    const shipstarting = expedition.ship_starting.join(" - ") || defaultValue;
+    const shipreturning = expedition.ship_return.join(" - ") || defaultValue;
+    const picture = expedition.picture_crew || defaultValue;
     const totaltime = expedition.total_time.replace('days', 'jours') || defaultValue;
-    const astronautsnumber = expedition.astronauts_number;
+    const astronautsnumber = expedition.astronauts_number || defaultValue;
 
     return (
         <section className="expedition">
