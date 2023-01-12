@@ -1,0 +1,78 @@
+.Last_expedtion_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Last_expedition_loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: var(--tertiary-color);
+}
+
+.Last_expedition_img {
+    height: 200px;
+    width: 200px;
+}
+
+.Last_expedtion_patch {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.Last_expedition_link {
+    text-decoration: none;
+}
+
+.Last_expedition_title {
+    font-size: 24px;
+    color: var(--tertiary-color);
+}
+
+.Last_expedition_text {
+    font-size: 16px;
+    color: var(--tertiary-color);
+}
+
+/* MediaQueries Tablet*/
+@media screen and (max-width: 768px) { 
+    .Last_expedition_loading {
+        font-size: 20px;
+    }
+
+    .Last_expedition_img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .Last_expedition_title {
+        font-size: 20px;
+    }
+
+    .Last_expedition_text {
+        font-size: 14px;
+    }
+}
+
+/* MediaQueries Mobile*/
+@media screen and (max-width: 480px) { 
+    .Last_expedition_loading {
+        font-size: 16px;
+    }
+
+    .Last_expedition_img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .Last_expedition_title {
+        font-size: 16px;
+    }
+
+    .Last_expedition_text {
+        font-size: 12px;
+    }
+}
