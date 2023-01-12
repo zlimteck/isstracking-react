@@ -25,6 +25,7 @@ function LastExpedition() {
     lastexpedition.date_start_fr = dateStart.getDate() + " " + monthNames[dateStart.getMonth()] + " " + dateStart.getFullYear();
     lastexpedition.date_end_fr = dateEnd.getDate() + " " + monthNames[dateEnd.getMonth()] + " " + dateEnd.getFullYear();
 
+
     //Affiche chargement avant d'avoir les données
     if (!lastexpedition.name_expedition) {
         return <div className="Last_expedition_loading">Chargement des données...</div>
@@ -39,8 +40,8 @@ function LastExpedition() {
                 <Link className="Last_expedition_link" to={`/expeditions/${lastexpedition.number_expedition}`}>
                     <h2 className="Last_expedition_title">{lastexpedition.name_expedition}</h2>
                 </Link>
-                <p className="Last_expedition_date"><strong>Date de début:</strong> {lastexpedition.date_start_fr}</p>
-                <p className="Last_expedition_date"><strong>Date de fin:</strong> {lastexpedition.date_end_fr}</p>
+                <p className="Last_expedition_date"><strong>Date de début:</strong> {lastexpedition.date_start_fr.replace('NaN undefined NaN', 'Information non disponible')}</p>
+                <p className="Last_expedition_date"><strong>Date de fin:</strong> {lastexpedition.date_end_fr.replace('NaN undefined NaN', 'Information non disponible')}</p>
             </div>
         </div>
     );
