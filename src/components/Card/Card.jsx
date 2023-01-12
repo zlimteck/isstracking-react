@@ -46,7 +46,7 @@ function Card(){
 
     useEffect(() => {
         setCurrentPage(1);
-      }, [searchTerm]);
+    }, [searchTerm]);
 
     return (
         <section className="gallery">
