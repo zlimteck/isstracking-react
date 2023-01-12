@@ -80,7 +80,7 @@ function Expeditions () {
             </div>
             <section className="collapse_astronautes">
                 <Collapse
-                title={`Astronautes a bord: (${astronautsnumber})`}
+                title={`Astronautes: (${astronautsnumber})`}
                 texte={people.map((astronauts, list) => (
                     <li key={list} className="list_astronauts">{astronauts}</li>
                 ))}
