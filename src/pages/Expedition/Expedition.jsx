@@ -57,7 +57,7 @@ function Expeditions () {
     const shipstarting = expedition.ship_starting.join(" - ") || defaultValue;
     const shipreturning = expedition.ship_return.join(" - ") || defaultValue;
     const picture = expedition.picture_crew || defaultValue;
-    const totaltime = expedition.total_time.replace('days', 'jours') || defaultValue;
+    const totaltime = expedition.total_time.replace('days', 'jours').replace('months', 'mois') || defaultValue;
     const astronautsnumber = expedition.astronauts_number || defaultValue;
 
     return (
