@@ -31,8 +31,13 @@ function Expeditions () {
     if (isError) {
         return <Error404 />;
     }
+
     if (isLoading) {
         return <div className="loading">Chargement des données...</div>;
+    }
+
+    if (expedition === null) {
+        return <Error404 />;
     }
     
     const monthNames = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin",

@@ -2,6 +2,18 @@
     color: var(--tertiary-color);
 }
 
+.requests {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    border-radius: 10px;
+    height: 50px;
+}
+
 .list_astronauts {
     list-style-type: none;
 }
