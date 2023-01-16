@@ -48,10 +48,14 @@ function Card(){
         setCurrentPage(1);
     }, [searchTerm]);
 
+    //Recupere le nombre de mission disponible 
+    const numExpeditions = expeditions.length;
+
     return (
         <section className="gallery">
         {isLoading && <div className="loading">Chargement des données...</div>}
         {isError && <div className="error">Trop de requêtes. Veuillez réessayer plus tard.</div>}
+        {!isLoading && !isError && filteredExpeditions.length === 0 && searchTerm !== '' && <div className="error">Aucune expéditions ne correspond au numéro de recherche. Il y a {numExpeditions} expéditions disponible.</div>}
         {!isLoading && !isError && filteredExpeditions.slice((currentPage - 1) * 10, currentPage * 10).map((expedition) => (
             <Link to={`/Expeditions/${expedition.number_expedition}`} key={expedition.number_expedition} className="card_link">
                 <div className="card_container">
@@ -69,7 +73,7 @@ function Card(){
                     {currentPage < numPages && <img className="arrow" src={nextArrow} alt="Icone page suivante" onClick={() => handlePageChange(1)} />}
                 </div>
                 <div className="card_number_search">
-                    <input className="imput_search" type="text" placeholder="Recherche par numéro" onChange={(event) => setSearchTerm(event.target.value)} />
+                    <input className="imput_search" type="number" placeholder="Recherche par numéro" onChange={(event) => setSearchTerm(event.target.value)} />
                 </div>
             </div>
         </section>
