@@ -36,6 +36,8 @@
     cursor: pointer;
 }
 
+/* Styles leaflet */
+
 .leaflet-popup-content-wrapper {
     background-color: var(--secondary-color);
     border-radius: 10px;
@@ -43,6 +45,19 @@
 
 .leaflet-popup-content {
     color: var(--tertiary-color);
+}
+
+.leaflet-popup-tip {
+    background: var(--tertiary-color);
+}
+
+.leaflet-bar a, .leaflet-bar a:hover {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color)
+}
+
+.leaflet-container .leaflet-control-attribution {
+    display: none;
 }
 
 /* MediaQueries Mobile */

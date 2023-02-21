@@ -62,7 +62,7 @@ return (
             <ISSPositionMarker />
         </MapContainer>
         <div className="Map_button">
-            <button className="button" onClick={goToISSPosition}>Zoomer sur l'ISS</button>
+            <button className="button" onClick={goToISSPosition}>Recentrer sur l'ISS</button>
         </div>
     </section>
     );
