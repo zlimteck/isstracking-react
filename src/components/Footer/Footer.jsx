@@ -7,8 +7,8 @@ function Footer() {
     return (
         <footer className='footer'>
             <div className='footer_content'>
-                <p>© 2022 - ISS Tracking</p>
-                <p>Par @Zlimteck</p>
+                <p>© 2022-2023 - ISS Tracking | Hébergé via <a className='footer_link' href="https://vercel.com/home" target="_blank" rel="noreferrer">VERCEL</a></p>
+                <p>@Zlimteck</p>
             </div>
         </footer>
     );

@@ -18,3 +18,9 @@
 .footer_content p {
     margin: 0;
 }
+
+.footer_link {
+    color: var(--tertiary-color);
+    font-weight: 500;
+    text-decoration: none;
+}
