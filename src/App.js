@@ -22,4 +22,10 @@ function App() {
     );
 }
 
+console.log(
+    "Site web de tracking de la Station Spatial Internationnal.\n" +
+    "Vous trouverez la position de l'ISS sur une map (leaflet) ainsi que les différentes expéditions vers celle-ci.\n" +
+    "Développer avec React.js, j'utilise également l'api (wheretheiss) pour la position de l'ISS et un api développé par mes soins pour les expéditions."
+);
+
 export default App;
