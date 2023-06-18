@@ -56,7 +56,7 @@ return (
                     <h2>ISS</h2>
                     <p>Latitude: {issPosition.lat}</p>
                     <p>Longitude: {issPosition.lng}</p>
-                    <p>Visibilité: {issVisibility}</p>
+                    <p>Visibilité: {issVisibility === "daylight" ? "Jour" : "Nuit"}</p>
                 </Popup>
             </Marker>
             <ISSPositionMarker />
