@@ -49,7 +49,7 @@ return (
             <TileLayer
                 url="https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}"
                 accessToken={process.env.REACT_APP_TOKEN_KEY}
-                id="mapbox/streets-v11"
+                id="mapbox/navigation-night-v1"
             />
             <Marker position={issPosition} icon={issVisibility === "daylight" ? ISSMarkerdaylight : ISSMarkereclipsed}>
                 <Popup>
