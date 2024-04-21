@@ -2,6 +2,7 @@ import './Home.css';
 import Carrousel from '../../components/Carrousel/Carrousel';
 import Live from '../../components/Live/Live';
 import News from '../../components/News/News';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function Home() {
     return (
@@ -13,7 +14,7 @@ function Home() {
             <Live />
             <News />
             <Carrousel />
-
+            <SpeedInsights />
         </section>
     );
 }
