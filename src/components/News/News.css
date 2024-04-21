@@ -9,6 +9,10 @@
 
 .News_title {
     font-size: 25px;
+    color: var(--tertiary-color);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-left: 20px;
 }
 
 .News_container {
