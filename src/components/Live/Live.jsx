@@ -16,7 +16,7 @@ function Live() {
         const observer = new IntersectionObserver(handleIntersection, {
             root: null,
             rootMargin: '0px',
-            threshold: 0.1,
+            threshold: 0.5, // Modifier le seuil pour déclencher l'intersection
         });
 
         observer.observe(document.querySelector('.Live'));
@@ -27,6 +27,12 @@ function Live() {
     return (
         <section className="Live">
             <h2 className="title_live">Live de l'ISS:</h2>
+            {!isVisible && (
+                <div className="video-facade">
+                    <button onClick={() => setIsVisible(true)}>Lancer la vidéo</button>
+                    <img src="placeholder_image.jpg" alt="Placeholder" />
+                </div>
+            )}
             {isVisible && (
                 <section className="Live_container">
                     <iframe className='FirstLive' src="https://www.youtube.com/embed/P9C25Un7xaM" title="YouTube video player live 1" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
