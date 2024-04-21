@@ -1,32 +1,53 @@
+//Fonction pour afficher les daily report de l'iss
 import React, { useEffect, useState } from 'react';
 import './News.css';
 import axios from 'axios';
 
 function News() {
+    const [isVisible, setIsVisible] = useState(false);
     const [news, setNews] = useState([]);
 
     useEffect(() => {
-        axios.get('https://api.spaceflightnewsapi.net/v4/reports?limit=6')
-            .then((response) => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('https://api.spaceflightnewsapi.net/v4/reports?limit=6');
                 console.log('Response from API:', response.data);
-                // Vérifier si la réponse contient des données
                 if (Array.isArray(response.data.results)) {
-                    // Mettre à jour news avec les données des résultats
                     setNews(response.data.results);
                 } else {
                     console.error('Results array not found in API response:', response.data);
                 }
-            })
-            .catch((error) => {
+            } catch (error) {
                 console.error('Error fetching data: ', error);
-            });
+            }
+        };
+
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                setIsVisible(true);
+                fetchData();
+                observer.disconnect();
+            }
+        }, {
+            root: null,
+            rootMargin: '0px',
+            threshold: 1,
+        });
+
+        observer.observe(document.querySelector('.News'));
+
+        return () => observer.disconnect();
     }, []);
 
     return (
         <section className="News">
             <h2 className="News_title">Rapports Journalier:</h2>
             <div className="News_container">
-                {/* Vérifier si news est un tableau avant d'appeler map */}
+                {!isVisible && (
+                    <div className="news-facade">
+                        <p>Chargement des nouvelles...</p>
+                    </div>
+                )}
                 {Array.isArray(news) && news.map((article) => (
                     <div key={article.id} className="News_article">
                         <img src={article.image_url} alt={article.title} className="News_image" />
