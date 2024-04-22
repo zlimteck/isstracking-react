@@ -51,7 +51,7 @@
     width: 46px;
     height: 79px;
     cursor: pointer;
-    margin-left: 10px;
+    margin-left: 20px;
     color: var(--tertiary-color);
 }
 
@@ -59,7 +59,7 @@
     width: 46px;
     height: 79px;
     cursor: pointer;
-    margin-right: 10px;
+    margin-right: 20px;
     color: var(--tertiary-color);
 }
 

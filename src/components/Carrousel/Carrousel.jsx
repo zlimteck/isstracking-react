@@ -6,19 +6,19 @@ import prevArrow from "../../assets/prevArrow.svg";
 const images = [
     {
         id: 1,
-        url: "https://live.staticflickr.com/65535/51891344064_ed3b0fa8c4_5k.jpg",
+        filename: "img/img1.webp",
     },
     {
         id: 2,
-        url: "https://live.staticflickr.com/65535/51663955083_2c4a9d14e7_5k.jpg",
+        filename: "img/img2.webp",
     },
     {
         id: 3,
-        url: "https://live.staticflickr.com/65535/51326220656_75a6d9406e_5k.jpg",
+        filename: "img/img3.webp",
     },
     {
         id: 4,
-        url: "https://live.staticflickr.com/65535/51891344339_141db6b22a_5k.jpg",
+        filename: "img/img4.webp",
     },
 ];
 
@@ -41,7 +41,7 @@ function Carrousel() {
     return (
         <section className="carrousel">
             <div className="images_container">
-                <img className="Carrousel_image" src={images[currentImage].url} alt="Illustration de l'ISS dans le carrousel"  />
+                <img className="Carrousel_image" src={process.env.PUBLIC_URL + '/' + images[currentImage].filename} alt="Illustration de l'ISS dans le carrousel"  />
                 <div className="carrousel_counter">
                     {currentImage + 1} / {images.length}
                     <p className="credit">@ThomasPesquet</p>
