@@ -28,6 +28,12 @@ function Header() {
                             >Expeditions
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink to="/Live" className={({isActive}) => {
+                            return isActive ? "navbar_link_active" : "navbar_link"; }}
+                            >Live
+                        </NavLink>
+                    </li>
                 </ul>
             </nav>
         </div>
