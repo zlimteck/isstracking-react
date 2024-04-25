@@ -41,7 +41,7 @@ function Carrousel() {
     return (
         <section className="carrousel">
             <div className="images_container">
-                <img className="Carrousel_image" src={process.env.PUBLIC_URL + '/' + images[currentImage].filename} alt="Illustration de l'ISS dans le carrousel"  />
+                <img className="Carrousel_image" src={process.env.PUBLIC_URL + '/' + images[currentImage].filename} alt="Illustration de l'ISS dans le carrousel" loading="lazy"/>
                 <div className="carrousel_counter">
                     {currentImage + 1} / {images.length}
                     <p className="credit">@ThomasPesquet</p>
