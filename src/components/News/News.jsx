@@ -3,6 +3,13 @@ import React, { useEffect, useState } from 'react';
 import './News.css';
 import axios from 'axios';
 
+const images = [
+    {
+        id: 1,
+        filename: "img/img_news.webp",
+    },
+];
+
 function News() {
     const [isVisible, setIsVisible] = useState(false);
     const [news, setNews] = useState([]);
@@ -50,7 +57,7 @@ function News() {
                 )}
                 {Array.isArray(news) && news.map((article) => (
                     <div key={article.id} className="News_article">
-                        <img src={article.image_url} alt={article.title} className="News_image" />
+                        <img src={process.env.PUBLIC_URL + '/' + images[0].filename} alt={article.title} className="News_image" />
                         <h3 className="News_article_title">{article.title}</h3>
                         <p className="News_article_summary">{article.summary}</p>
                         <a href={article.url} target="_blank" rel="noreferrer" className="News_article_link">Lire l'article</a>
