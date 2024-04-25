@@ -92,7 +92,7 @@ function Expeditions () {
                 />
             </section>
             <section className="collapse_crew">
-                <img className="crew_picture" src={picture} alt="Crew"/>
+                <img className="crew_picture" src={picture} alt="Crew" loading="lazy"/>
             </section>
         </section>
     )

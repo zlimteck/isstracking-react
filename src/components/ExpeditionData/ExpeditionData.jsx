@@ -4,7 +4,7 @@ function ExpeditionData ({title, patch, datestart, datend, shipstarting, shipret
     return (
         <section className="expedition_infos">
             <h1 className="expedition_title">{title}</h1>
-            <img className="expedition_patch" src={patch} alt="Expedition Patch"/>
+            <img className="expedition_patch" src={patch} alt="Expedition Patch" loading="lazy"/>
             <div className="expedition_date">
                 <h3 className="expedition_date_title">Date de lancement:</h3>
                 <p className="expedition_date_text">{datestart}</p>
