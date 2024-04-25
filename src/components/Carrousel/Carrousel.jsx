@@ -7,18 +7,26 @@ const images = [
     {
         id: 1,
         filename: "img/img1.webp",
+        width: 600,
+        height: 300,
     },
     {
         id: 2,
         filename: "img/img2.webp",
+        width: 600,
+        height: 300,
     },
     {
         id: 3,
         filename: "img/img3.webp",
+        width: 600,
+        height: 300,
     },
     {
         id: 4,
         filename: "img/img4.webp",
+        width: 600,
+        height: 300,
     },
 ];
 
@@ -41,7 +49,14 @@ function Carrousel() {
     return (
         <section className="carrousel">
             <div className="images_container">
-                <img className="Carrousel_image" src={process.env.PUBLIC_URL + '/' + images[currentImage].filename} alt="Illustration de l'ISS dans le carrousel" loading="lazy"/>
+                <img
+                    className="Carrousel_image"
+                    src={process.env.PUBLIC_URL + '/' + images[currentImage].filename}
+                    alt="Illustration de l'ISS dans le carrousel"
+                    loading="lazy"
+                    width={images[currentImage].width}
+                    height={images[currentImage].height}
+                />
                 <div className="carrousel_counter">
                     {currentImage + 1} / {images.length}
                     <p className="credit">@ThomasPesquet</p>
