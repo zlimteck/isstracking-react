@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import './Card.css';
 import axios from 'axios';
@@ -8,7 +8,7 @@ import prevArrow from '../../assets/prevArrow.svg';
 // Gère l'erreur samesite cookie
 document.cookie = "SameSite=None; Secure";
 
-function Card(){
+function Card() {
     const [expeditions, setExpeditions] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
@@ -16,25 +16,40 @@ function Card(){
     const [searchTerm, setSearchTerm] = useState('');
     const [numPages, setNumPages] = useState(0);
     const baseImageUrl = 'https://api.isstracking.xyz/v1/expeditions/images/';
-
+    const navigate = useNavigate(); 
+    const location = useLocation();
 
     useEffect(() => {
         setIsLoading(true);
         setIsError(false);
         axios.get('https://api.isstracking.xyz/v1/expeditions')
-        .then((response) => {
-            setExpeditions(response.data);
-        })
-        .catch((error) => {
-            setIsError(true);
-        })
-        .finally(() => {
-            setIsLoading(false);
-        });
+            .then((response) => {
+                setExpeditions(response.data);
+            })
+            .catch((error) => {
+                setIsError(true);
+            })
+            .finally(() => {
+                setIsLoading(false);
+            });
     }, []);
 
+    // Initialiser la page actuelle à partir des paramètres de requête
+    useEffect(() => {
+        const queryParams = new URLSearchParams(location.search);
+        const page = parseInt(queryParams.get('page')) || 1;
+        setCurrentPage(page);
+    }, [location.search]);
+
+    // Mettre à jour l'URL à chaque changement de page 
+    useEffect(() => {
+        const queryParams = new URLSearchParams(location.search);
+        queryParams.set('page', currentPage);
+        navigate(`?${queryParams.toString()}`, { replace: true});
+    }, [currentPage, navigate, location.search]);
+
     const handlePageChange = (increment) => {
-        setCurrentPage(currentPage + increment);
+        setCurrentPage(prevPage => prevPage + increment);
     }
 
     const filteredExpeditions = expeditions.filter((expedition) => {
@@ -43,7 +58,7 @@ function Card(){
 
     useEffect(() => {
         setNumPages(Math.ceil(filteredExpeditions.length / 10));
-    }, [filteredExpeditions]); 
+    }, [filteredExpeditions]);
 
     useEffect(() => {
         setCurrentPage(1);
@@ -54,19 +69,19 @@ function Card(){
 
     return (
         <section className="gallery">
-        {isLoading && <div className="loading">Chargement des données...</div>}
-        {isError && <div className="error">Trop de requêtes. Veuillez réessayer plus tard.</div>}
-        {!isLoading && !isError && filteredExpeditions.length === 0 && searchTerm !== '' && <div className="error">Aucune expéditions ne correspond au numéro de recherche. Il y a {numExpeditions} expéditions disponible.</div>}
-        {!isLoading && !isError && filteredExpeditions.slice((currentPage - 1) * 10, currentPage * 10).map((expedition) => (
-            <Link to={`/Expeditions/${expedition.number_expedition}`} key={expedition.number_expedition} className="card_link">
-                <div className="card_container">
-                    <img className="card_img" src={`${baseImageUrl}${expedition.patch_expedition}`} alt="Expedition Patch" loading="lazy"/>
-                </div>
-                <div className="card_title">
-                    <strong>{expedition.name_expedition}</strong>
-                </div>
-            </Link>
-        ))}
+            {isLoading && <div className="loading">Chargement des données...</div>}
+            {isError && <div className="error">Trop de requêtes. Veuillez réessayer plus tard.</div>}
+            {!isLoading && !isError && filteredExpeditions.length === 0 && searchTerm !== '' && <div className="error">Aucune expéditions ne correspond au numéro de recherche. Il y a {numExpeditions} expéditions disponible.</div>}
+            {!isLoading && !isError && filteredExpeditions.slice((currentPage - 1) * 10, currentPage * 10).map((expedition) => (
+                <Link to={`/Expeditions/${expedition.number_expedition}`} key={expedition.number_expedition} className="card_link">
+                    <div className="card_container">
+                        <img className="card_img" src={`${baseImageUrl}${expedition.patch_expedition}`} alt="Expedition Patch" loading="lazy" />
+                    </div>
+                    <div className="card_title">
+                        <strong>{expedition.name_expedition}</strong>
+                    </div>
+                </Link>
+            ))}
             <div className="card_option_container">
                 <div className="card_page_count">
                     {currentPage > 1 && <img className="arrow" src={prevArrow} alt="Icone page precedente" onClick={() => handlePageChange(-1)} />}
