@@ -55,15 +55,18 @@ function Expeditions () {
     const defaultValue = 'Information non disponible';
     const key = expedition.number_expedition || defaultValue;
     const name = expedition.name_expedition || defaultValue;
-    const patch = expedition.patch_expedition || defaultValue;
+    //const patch = expedition.patch_expedition || defaultValue;
     const datestart = expedition.date_start_fr.join(" , ").replace('NaN undefined NaN', 'Information non disponible');
     const datend = expedition.date_end_fr.join(" , ").replace('NaN undefined NaN', 'Information non disponible');
     const people = expedition.astronauts || defaultValue;
     const shipstarting = expedition.ship_starting.join(" - ") || defaultValue;
     const shipreturning = expedition.ship_return.join(" - ") || defaultValue;
-    const picture = expedition.picture_crew || defaultValue;
+    //const picture = expedition.picture_crew || defaultValue;
     const totaltime = expedition.total_time.replace('days', 'jours').replace('months', 'mois').replace('hours', 'heures') || defaultValue;
     const astronautsnumber = expedition.astronauts_number || defaultValue;
+    const baseImageUrl = 'https://api.isstracking.xyz/v1/expeditions/images/';
+    const patch = `${baseImageUrl}${expedition.patch_expedition}` || defaultValue;
+    const picture = `${baseImageUrl}${expedition.picture_crew}` || defaultValue;
 
     return (
         <section className="expedition">

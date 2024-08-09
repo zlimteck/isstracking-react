@@ -15,6 +15,7 @@ function Card(){
     const [currentPage, setCurrentPage] = useState(1);
     const [searchTerm, setSearchTerm] = useState('');
     const [numPages, setNumPages] = useState(0);
+    const baseImageUrl = 'https://api.isstracking.xyz/v1/expeditions/images/';
 
 
     useEffect(() => {
@@ -59,7 +60,7 @@ function Card(){
         {!isLoading && !isError && filteredExpeditions.slice((currentPage - 1) * 10, currentPage * 10).map((expedition) => (
             <Link to={`/Expeditions/${expedition.number_expedition}`} key={expedition.number_expedition} className="card_link">
                 <div className="card_container">
-                    <img className="card_img" src={expedition.patch_expedition} alt="Expedition Patch" loading="lazy"/>
+                    <img className="card_img" src={`${baseImageUrl}${expedition.patch_expedition}`} alt="Expedition Patch" loading="lazy"/>
                 </div>
                 <div className="card_title">
                     <strong>{expedition.name_expedition}</strong>
