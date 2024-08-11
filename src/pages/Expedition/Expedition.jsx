@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import ExpeditionData from '../../components/ExpeditionData/ExpeditionData';
 import Collapse from '../../components/Collapse/Collapse';
+import MissionNavigation from '../../components/MissionNavigation/MissionNavigation';
 import './Expedition.css';
 
 function Expeditions () {
@@ -96,6 +97,9 @@ function Expeditions () {
             </section>
             <section className="collapse_crew">
                 <img className="crew_picture" src={picture} alt="Crew" loading="lazy"/>
+            </section>
+            <section className="mission_navigation">
+                <MissionNavigation currentId={parseInt(params.id)} currentImage={patch} />
             </section>
         </section>
     )
