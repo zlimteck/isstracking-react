@@ -5,10 +5,15 @@
     background-color: var(--secondary-color);
     border-radius: 10px;
     width: 100%;
-    height: 100%;   
+    height: 100%;
 }
 
-/* nav button a droite et a gauche*/ 
+/* Si un des boutons est manquant, on centre le bouton restant */
+.navigation-buttons .nav-button:only-child, 
+.navigation-buttons .current-mission:only-child {
+    margin: 0 auto;
+}
+
 .nav-button {
     display: flex;
     flex-direction: column;
@@ -34,6 +39,7 @@
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    margin: 20px;
 }
 
 .button-text-current {
@@ -80,7 +86,6 @@
     }
 }
 
-
 /* MediaQueries Mobile */
 @media screen and (max-width: 480px) {
     .nav-button {
@@ -96,6 +101,11 @@
         width: 30px;
         height: 30px;
     }
+
+    .current-mission {
+        margin: 10px;
+    }
+    
     
     .next-button-image {
         width: 30px;
@@ -110,5 +120,3 @@
         font-size: 14px;
     }
 }
-
-
