@@ -27,6 +27,10 @@ function News() {
         fetchData();
     }, []);
 
+    news.forEach((article) => {
+        article.summary = article.summary.replace('[&#8230;]', '...');
+    });
+
     return (
         <section className="News">
             <h2 className="News_title">Rapports Journalier:</h2>

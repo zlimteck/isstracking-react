@@ -1,6 +1,6 @@
 //Function to display Live youtube video of the ISS
 import React, { useState } from 'react';
-import './Live.css';
+import './Cam2.css';
 
 function Live() {
     const [isVisible, setIsVisible] = useState(false);
@@ -26,7 +26,7 @@ function Live() {
 
     return (
         <section className="Live">
-            <h2 className="title_live">Live de l'ISS:</h2>
+            <h2 className="title_live">Cam 2 de l'ISS:</h2>
             {!isVisible && (
                 <div className="video-facade">
                     <button onClick={() => setIsVisible(true)}>Lancer la vidéo</button>
@@ -35,8 +35,7 @@ function Live() {
             )}
             {isVisible && (
                 <section className="Live_container">
-                    <iframe className='FirstLive' src="https://www.youtube.com/embed/P9C25Un7xaM" title="YouTube video player live 1" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                    <iframe className='TwoLive' src="https://www.youtube.com/embed/FkP_Qxw5xns" title="YouTube video player live 2" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    <iframe className='TwoLive' src="https://www.youtube.com/embed/FkP_Qxw5xns" title="YouTube video player Cam 2" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </section>
             )}
         </section>

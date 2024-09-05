@@ -29,15 +29,6 @@
     border-radius: 10px;  
 }
 
-.FirstLive {
-    justify-content: center;
-    align-items: center;
-    color: var(--tertiary-color);
-    margin: 0;
-    width: 560px;
-    height: 315px;
-}
-
 .TwoLive {
     justify-content: center;
     align-items: center;
@@ -55,12 +46,6 @@
         justify-content: space-between;
     }
 
-    .FirstLive {
-        width: auto;
-        height: 315px;
-        margin-bottom: 10px;
-    }
-
     .TwoLive {
         width: auto;
         height: 315px;
@@ -76,12 +61,6 @@
     .Live_container {
         flex-direction: column;
         justify-content: space-between;
-    }
-
-    .FirstLive {
-        width: auto;
-        height: 315px;
-        margin-bottom: 20px;
     }
 
     .TwoLive {
@@ -104,12 +83,6 @@
         margin-bottom: 10px;
         padding-left: 10px;
         padding-right: 10px;
-    }
-
-    .FirstLive {
-        width: auto;
-        height: 225px;
-        margin-bottom: 10px;
     }
 
     .TwoLive {
