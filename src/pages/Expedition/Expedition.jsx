@@ -63,7 +63,7 @@ function Expeditions () {
     const shipstarting = expedition.ship_starting.join(" - ") || defaultValue;
     const shipreturning = expedition.ship_return.join(" - ") || defaultValue;
     //const picture = expedition.picture_crew || defaultValue;
-    const totaltime = expedition.total_time.replace('days', 'jours').replace('months', 'mois').replace('hours', 'heures') || defaultValue;
+    const totaltime = expedition.total_time.replace('days', 'jours').replace('months', 'mois').replace('hours', 'heures').replace('hour', 'heure') || defaultValue;
     const astronautsnumber = expedition.astronauts_number || defaultValue;
     const baseImageUrl = 'https://api.isstracking.xyz/v1/expeditions/images/';
     const patch = `${baseImageUrl}${expedition.patch_expedition}` || defaultValue;
